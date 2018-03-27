@@ -124,6 +124,7 @@ const char     P2P_STAT_TRUSTED_PUB_KEY[]                    = "";
 const char* const SEED_NODES[] = { 
   "212.237.7.129:8080",
   "94.177.187.216:8080",
+  "80.211.225.136:8080"
 };
 
 struct CheckpointData {
@@ -132,6 +133,7 @@ struct CheckpointData {
 };
 
 const std::initializer_list<CheckpointData> CHECKPOINTS = { 
+  {3500,	"33f483f293e8a09edd9bbcfec49d26bf13e582d83e339fee0abd0764a7dd23ea" }
 };
 
 } // CryptoNote

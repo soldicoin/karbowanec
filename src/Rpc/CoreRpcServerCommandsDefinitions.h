@@ -272,12 +272,14 @@ struct COMMAND_RPC_GET_INFO {
     std::string status;
     std::string version;
     uint64_t height;
+	std::string top_block_hash;
     uint64_t difficulty;
     uint64_t tx_count;
     uint64_t tx_pool_size;
     uint64_t alt_blocks_count;
     uint64_t outgoing_connections_count;
     uint64_t incoming_connections_count;
+	uint64_t rpc_connections_count;
     uint64_t white_peerlist_size;
     uint64_t grey_peerlist_size;
     uint32_t last_known_block_index;
@@ -287,12 +289,14 @@ struct COMMAND_RPC_GET_INFO {
       KV_MEMBER(status)
       KV_MEMBER(version)
       KV_MEMBER(height)
+	  KV_MEMBER(top_block_hash)
       KV_MEMBER(difficulty)
       KV_MEMBER(tx_count)
       KV_MEMBER(tx_pool_size)
       KV_MEMBER(alt_blocks_count)
       KV_MEMBER(outgoing_connections_count)
       KV_MEMBER(incoming_connections_count)
+	  KV_MEMBER(rpc_connections_count)
       KV_MEMBER(white_peerlist_size)
       KV_MEMBER(grey_peerlist_size)
       KV_MEMBER(last_known_block_index)
@@ -688,20 +692,6 @@ struct F_COMMAND_RPC_GET_TRANSACTION_DETAILS {
   };
 };
 
-struct F_COMMAND_RPC_GET_POOL_RAW {
-  typedef std::vector<std::string> request;
-
-  struct response {
-    std::string transactions;
-    std::string status;
-
-    void serialize(ISerializer &s) {
-      KV_MEMBER(transactions)
-      KV_MEMBER(status)
-    }
-  };
-};
-
 struct F_COMMAND_RPC_GET_POOL {
   typedef EMPTY_STRUCT request;
 
@@ -783,6 +773,18 @@ struct COMMAND_RPC_QUERY_BLOCKS_LITE {
       KV_MEMBER(fullOffset)
       KV_MEMBER(items)
     }
+  };
+};
+
+struct COMMAND_RPC_GEN_PAYMENT_ID {
+  typedef EMPTY_STRUCT request;
+  
+  struct response {
+	  std::string payment_id;
+
+	  void serialize(ISerializer &s) {
+		  KV_MEMBER(payment_id)
+	  }
   };
 };
 

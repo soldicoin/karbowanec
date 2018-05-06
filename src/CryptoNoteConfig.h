@@ -27,7 +27,7 @@ const uint64_t DIFFICULTY_TARGET                             = 60; // seconds
 const uint64_t CRYPTONOTE_MAX_BLOCK_NUMBER                   = 500000000;
 const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                = 500000000;
 const size_t   CRYPTONOTE_MAX_TX_SIZE                        = 1000000000;
-const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 150; // addresses start with "S6"
+const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 155; // addresses start with "Sv"
 const size_t   CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW          = 10;
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT            = DIFFICULTY_TARGET * 7;
 
@@ -92,7 +92,7 @@ const char     MINER_CONFIG_FILE_NAME[]                      = "miner_conf.json"
 } // parameters
 
 const char     CRYPTONOTE_NAME[]                             = "soldi";
-const char     GENESIS_COINBASE_TX_HEX[]                     = "010a01ff0001a7a4b0e4b145029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd0880712101187bb08988f06202a8a065f9c9b5d5b7eec32b3e47f72e554b343a4ddba31b5d";
+const char     GENESIS_COINBASE_TX_HEX[]                     = "";
 
 const uint8_t  CURRENT_TRANSACTION_VERSION                   =  1;
 const uint8_t  BLOCK_MAJOR_VERSION_1                         =  1;
@@ -125,7 +125,7 @@ const uint32_t P2P_FAILED_ADDR_FORGET_SECONDS                = (60 * 60);     //
 const uint32_t P2P_IP_BLOCKTIME                              = (60 * 60 * 24);//24 hour
 const uint32_t P2P_IP_FAILS_BEFORE_BLOCK                     = 10;
 const uint32_t P2P_IDLE_CONNECTION_KILL_INTERVAL             = (5 * 60);      //5 minutes
-const char     P2P_STAT_TRUSTED_PUB_KEY[]                    = "3a96y6a8u964i8p1640o55336858dobuio8c668pe635poe365u8i84d085pa210";
+const char     P2P_STAT_TRUSTED_PUB_KEY[]                    = "3a96y6a9u964i0p1640o55306858dobuio8c968pe635poe365u8i84d085pa210";
 
 const char* const SEED_NODES[] = { 
   "80.211.191.90:8400",

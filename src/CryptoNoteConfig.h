@@ -92,7 +92,7 @@ const char     MINER_CONFIG_FILE_NAME[]                      = "miner_conf.json"
 } // parameters
 
 const char     CRYPTONOTE_NAME[]                             = "soldi";
-const char     GENESIS_COINBASE_TX_HEX[]                     = "";
+const char     GENESIS_COINBASE_TX_HEX[]                     = "010a01ff0001a7a4b0e4b145029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd08807121019b573b5d7e39c21d769642d6ab7b167fd011229248225dc9b7fd6bd0c07ac981";
 
 const uint8_t  CURRENT_TRANSACTION_VERSION                   =  1;
 const uint8_t  BLOCK_MAJOR_VERSION_1                         =  1;
@@ -128,10 +128,10 @@ const uint32_t P2P_IDLE_CONNECTION_KILL_INTERVAL             = (5 * 60);      //
 const char     P2P_STAT_TRUSTED_PUB_KEY[]                    = "8f85f7h5a434a8t1510d13566228debfcf9c800ce505efe225d8c94d565fa909";
 
 const char* const SEED_NODES[] = { 
-  "80.211.191.90:8080",
-  "94.177.187.216:8080",
-  "80.211.225.136:8080",
-  "212.237.29.222:8080"
+  "80.211.191.90:48080",
+  "94.177.187.216:48080",
+  "80.211.225.136:48080",
+  "212.237.29.222:48080"
 };
 
 struct CheckpointData {
